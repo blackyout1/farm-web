@@ -1,0 +1,9 @@
+{
+  "mainAccount": "MyMain",
+  "autoPauseAllOnDanger": false,
+  "autoScanOnStart": true,
+  "autoScanPortStart": 25580,
+  "autoScanPortEnd": 25600,
+  "host": "127.0.0.1",
+  "bots": []
+}

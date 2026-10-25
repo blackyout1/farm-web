@@ -1,0 +1,6 @@
+{
+  "name": "Farm+ Hub Web",
+  "description": "Современная веб и мобильная панель управления ботами Farm+ Hub: онлайн мониторинг, авто-фарм, авто-зачарование, живые графики и управление с телефона.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
