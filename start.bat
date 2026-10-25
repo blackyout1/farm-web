@@ -10,7 +10,7 @@ echo.
 
 where node >nul 2>nul
 if %errorlevel% neq 0 (
-    echo [ОШИБКА] Node.js не установлен на компьютере!
+    echo [ОШИБКА] Node.js не найден на компьютере!
     echo Скачайте и установите Node.js с официального сайта:
     echo https://nodejs.org (рекомендуется версия LTS)
     echo.
@@ -19,8 +19,12 @@ if %errorlevel% neq 0 (
 )
 
 if not exist node_modules (
-    echo [1/2] Установка необходимых библиотек...
-    call npm install
+    echo [1/2] Установка необходимых библиотек (npm install)...
+    call npm install --legacy-peer-deps
+    if %errorlevel% neq 0 (
+        echo [Попытка 2] Повтор с флагом --force...
+        call npm install --force
+    )
     echo.
 )
 
